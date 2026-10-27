@@ -1,0 +1,15 @@
+{
+  "name": "lipms-hospital-management-system",
+  "version": "1.0.0",
+  "description": "Integrated Hospital Management & Pharmacy Billing System (PCT-HMIS / LIPMS)",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install && npm --prefix \"Doctor Portal\" install",
+    "build:client": "npm --prefix client run build",
+    "build:doctor": "npm --prefix \"Doctor Portal\" run build",
+    "build:all": "npm run build:client && npm run build:doctor",
+    "start:server": "npm --prefix server start",
+    "start:client": "npm --prefix client run dev",
+    "start:doctor": "npm --prefix \"Doctor Portal\" run dev"
+  }
+}

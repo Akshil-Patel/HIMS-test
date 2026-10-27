@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: lipms-backend
+    env: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node src/server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+      - key: DOCTOR_PORTAL_URL
+        sync: false
+      - key: API_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: RAZORPAY_KEY_ID
+        value: rzp_test_TsdkF4dZuRQHa4
+      - key: RAZORPAY_KEY_SECRET
+        value: qCINS3ara1BmyXmVYvULlZ48
